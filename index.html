@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>个人介绍</title>
+    <style>
+      /* 设置页面样式 */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+  /* 设置标题样式 */
+  h1 {
+    text-align: center;
+    color: #333333;
+  }
+  
+  /* 设置表单样式 */
+  form {
+    text-align: center;
+  }
+  
+  /* 设置计算器按钮样式 */
+  input[type=button] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  /* 设置计算器输入框样式 */
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+  }
+  
+  /* 设置计算器结果样式 */
+  #result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+</style>
+  </head>
+  <body>
+    <h1>个人介绍</h1>
+<p>大家好，我叫 <strong>笑笑贴贴</strong>。</p>
+
+<form>
+  <label for="num1">请输入第一个数字：</label>
+  <input type="text" id="num1" name="num1"><br>
+  
+  <label for="num2">请输入第二个数字：</label>
+  <input type="text" id="num2" name="num2"><br>
+  
+  <input type="button" value="计算" onclick="calculate()"><br>
+  
+  <div id="result"></div>
+</form>
+
+<script>
+  function calculate() {
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+    var result = num1 + num2;
+    document.getElementById("result").innerHTML = "计算结果为：" + result;
+  }
+</script>
+  </body>
+</html>
